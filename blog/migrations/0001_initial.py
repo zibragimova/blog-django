@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('updated', models.DateTimeField(auto_now=True)),
                 ('status', models.CharField(max_length=10, default='draft', choices=[('draft', 'Draft'), ('published', 'Published')])),
-                ('author', models.ForeignKey(to=settings.AUTH_USER_MODEL, related_name='blog_posts', on_delete='')),
+                ('author', models.ForeignKey(to=settings.AUTH_USER_MODEL, related_name='blog_posts')),
             ],
             options={
                 'ordering': ('-publish',),
